@@ -69,12 +69,14 @@ object d3force extends js.Object {
   @js.native
   trait PositioningX[N <: SimulationNode] extends ForceImpl[N] {
     def x(x: Double): this.type = js.native
+    def x(x: js.Function1[N, Double]): this.type = js.native
     def strength(strength: Double): this.type = js.native
   }
 
   @js.native
   trait PositioningY[N <: SimulationNode] extends ForceImpl[N] {
     def y(y: Double): this.type = js.native
+    def y(x: js.Function1[N, Double]): this.type = js.native
     def strength(strength: Double): this.type = js.native
   }
 

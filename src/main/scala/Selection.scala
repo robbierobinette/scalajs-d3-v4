@@ -98,6 +98,7 @@ object d3selection extends js.Object {
 
     def call(func: js.Function, args: js.Any*): T = js.native
     def remove(): T = js.native
+    def merge(selection: Update[Datum]): T = js.native
   }
 
   @js.native
